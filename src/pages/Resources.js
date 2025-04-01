@@ -71,6 +71,23 @@ const ResourceCard = styled.div`
 const ResourceIcon = styled.div`
   font-size: 2rem;
   color: ${props => props.theme.colors.primary};
+  margin-bottom: ${props => props.theme.spacing.medium};
+`;
+
+const ResourceTitle = styled.h3`
+  margin-bottom: ${props => props.theme.spacing.small};
+`;
+
+const ResourceDescription = styled.p`
+  margin-bottom: ${props => props.theme.spacing.medium};
+  flex-grow: 1;
+`;
+
+const ResourceLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: ${props => props.theme.spacing.small};
+  color: ${props => props.theme.colors.primary};
   font-weight: bold;
   
   &:hover {
@@ -165,6 +182,7 @@ const ResourceTagsContainer = styled.div`
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: ${props => props.theme.spacing.small};
+  margin-bottom: ${props => props.theme.spacing.small};
 `;
 
 const ResourceTag = styled.span`
@@ -511,306 +529,3 @@ const Resources = () => {
 };
 
 export default Resources;
-      </div>
-    </>
-  );
-};
-
-export default Resources;;
-  background-color: ${props => props.level === 'Beginner' 
-    ? '#4caf50' 
-    : props.level === 'Intermediate' 
-      ? '#ff9800' 
-      : '#f44336'};
-  color: white;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  margin-left: ${props => props.theme.spacing.small};
-  vertical-align: middle;
-`;
-
-const Resources = () => {
-  return (
-    <>
-      <PageHeader>
-        <div className="container">
-          <HeaderContent>
-            <PageTitle>Learning Resources</PageTitle>
-            <PageDescription>
-              Enhance your Node.js and GitHub skills with these carefully selected resources
-            </PageDescription>
-          </HeaderContent>
-        </div>
-      </PageHeader>
-      
-      <div className="container">
-        <Section>
-          <SectionTitle>Official Documentation</SectionTitle>
-          
-          <ResourcesGrid>
-            <ResourceCard>
-              <ResourceIcon>
-                <FaNodeJs />
-              </ResourceIcon>
-              <ResourceTitle>Node.js Documentation</ResourceTitle>
-              <ResourceDescription>
-                The official Node.js documentation provides comprehensive guides, API references, and best practices directly from the source.
-              </ResourceDescription>
-              <ResourceLink href="https://nodejs.org/en/docs/" target="_blank" rel="noopener noreferrer">
-                Visit Documentation <FaExternalLinkAlt />
-              </ResourceLink>
-            </ResourceCard>
-            
-            <ResourceCard>
-              <ResourceIcon>
-                <FaCode />
-              </ResourceIcon>
-              <ResourceTitle>Express.js Documentation</ResourceTitle>
-              <ResourceDescription>
-                Learn about Express, the most popular web framework for Node.js, with official guides and API references.
-              </ResourceDescription>
-              <ResourceLink href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">
-                Visit Documentation <FaExternalLinkAlt />
-              </ResourceLink>
-            </ResourceCard>
-            
-            <ResourceCard>
-              <ResourceIcon>
-                <FaGithub />
-              </ResourceIcon>
-              <ResourceTitle>GitHub Docs</ResourceTitle>
-              <ResourceDescription>
-                Comprehensive documentation for all GitHub features, including guides on Git, GitHub Actions, and collaboration workflows.
-              </ResourceDescription>
-              <ResourceLink href="https://docs.github.com/en" target="_blank" rel="noopener noreferrer">
-                Visit Documentation <FaExternalLinkAlt />
-              </ResourceLink>
-            </ResourceCard>
-          </ResourcesGrid>
-        </Section>
-        
-        <Section>
-          <SectionTitle>Online Courses</SectionTitle>
-          
-          <ResourcesGrid>
-            <ResourceCard>
-              <ResourceIcon>
-                <FaVideo />
-              </ResourceIcon>
-              <ResourceTitle>Node.js for Beginners</ResourceTitle>
-              <ResourceDescription>
-                A comprehensive video course that takes you from the basics of Node.js to building complete web applications.
-              </ResourceDescription>
-              <ResourceLink href="https://www.udemy.com/course/nodejs-the-complete-guide/" target="_blank" rel="noopener noreferrer">
-                View Course <FaExternalLinkAlt />
-              </ResourceLink>
-            </ResourceCard>
-            
-            <ResourceCard>
-              <ResourceIcon>
-                <FaVideo />
-              </ResourceIcon>
-              <ResourceTitle>Git & GitHub Crash Course</ResourceTitle>
-              <ResourceDescription>
-                Learn the essentials of Git and GitHub in this focused course, perfect for beginners looking to master version control.
-              </ResourceDescription>
-              <ResourceLink href="https://www.youtube.com/watch?v=RGOj5yH7evk" target="_blank" rel="noopener noreferrer">
-                Watch Tutorial <FaExternalLinkAlt />
-              </ResourceLink>
-            </ResourceCard>
-            
-            <ResourceCard>
-              <ResourceIcon>
-                <FaVideo />
-              </ResourceIcon>
-              <ResourceTitle>Advanced Node.js Concepts</ResourceTitle>
-              <ResourceDescription>
-                Dive deeper into Node.js with this advanced course covering streams, clustering, performance optimization, and more.
-              </ResourceDescription>
-              <ResourceLink href="https://www.udemy.com/course/advanced-node-for-developers/" target="_blank" rel="noopener noreferrer">
-                View Course <FaExternalLinkAlt />
-              </ResourceLink>
-            </ResourceCard>
-          </ResourcesGrid>
-        </Section>
-        
-        <Section>
-          <SectionTitle>Books & Articles</SectionTitle>
-          
-          <ResourcesGrid>
-            <ResourceCard>
-              <ResourceIcon>
-                <FaBook />
-              </ResourceIcon>
-              <ResourceTitle>Node.js Design Patterns</ResourceTitle>
-              <ResourceDescription>
-                A comprehensive guide to implementing design patterns in Node.js applications, helping you write more maintainable and scalable code.
-              </ResourceDescription>
-              <ResourceLink href="https://www.packtpub.com/product/node-js-design-patterns-third-edition/9781839214110" target="_blank" rel="noopener noreferrer">
-                Learn More <FaExternalLinkAlt />
-              </ResourceLink>
-            </ResourceCard>
-            
-            <ResourceCard>
-              <ResourceIcon>
-                <FaBook />
-              </ResourceIcon>
-              <ResourceTitle>Pro Git</ResourceTitle>
-              <ResourceDescription>
-                The complete guide to Git, available online for free. Written by Git experts Scott Chacon and Ben Straub.
-              </ResourceDescription>
-              <ResourceLink href="https://git-scm.com/book/en/v2" target="_blank" rel="noopener noreferrer">
-                Read Online <FaExternalLinkAlt />
-              </ResourceLink>
-            </ResourceCard>
-            
-            <ResourceCard>
-              <ResourceIcon>
-                <FaGlobe />
-              </ResourceIcon>
-              <ResourceTitle>Node.js Best Practices</ResourceTitle>
-              <ResourceDescription>
-                A collection of best practices and tips for writing production-ready Node.js applications, curated by the community.
-              </ResourceDescription>
-              <ResourceLink href="https://github.com/goldbergyoni/nodebestpractices" target="_blank" rel="noopener noreferrer">
-                Read Guide <FaExternalLinkAlt />
-              </ResourceLink>
-            </ResourceCard>
-          </ResourcesGrid>
-        </Section>
-        
-        <Section>
-          <SectionTitle>Practice Projects</SectionTitle>
-          
-          <ResourcesGrid>
-            <ProjectCard>
-              <ResourceIcon>
-                <FaCode />
-              </ResourceIcon>
-              <ResourceTitle>
-                ToDo List API
-                <ProjectLevel level="Beginner">Beginner</ProjectLevel>
-              </ResourceTitle>
-              <ResourceDescription>
-                Create a simple REST API for a todo list application using Node.js and Express. This project will help you understand routing, middleware, and basic CRUD operations.
-              </ResourceDescription>
-              <ul>
-                <li>Set up a basic Express server</li>
-                <li>Implement routes for creating, reading, updating, and deleting tasks</li>
-                <li>Store data in memory or a JSON file</li>
-                <li>Implement input validation</li>
-                <li>Add basic authentication</li>
-              </ul>
-            </ProjectCard>
-            
-            <ProjectCard>
-              <ResourceIcon>
-                <FaCode />
-              </ResourceIcon>
-              <ResourceTitle>
-                Real-time Chat Application
-                <ProjectLevel level="Intermediate">Intermediate</ProjectLevel>
-              </ResourceTitle>
-              <ResourceDescription>
-                Build a real-time chat application using Node.js, Express, and Socket.IO. This project will teach you about WebSockets and real-time communication.
-              </ResourceDescription>
-              <ul>
-                <li>Set up an Express server with Socket.IO</li>
-                <li>Implement user authentication</li>
-                <li>Create chat rooms and private messaging</li>
-                <li>Add features like typing indicators and online status</li>
-                <li>Store chat history in a database</li>
-              </ul>
-            </ProjectCard>
-            
-            <ProjectCard>
-              <ResourceIcon>
-                <FaCode />
-              </ResourceIcon>
-              <ResourceTitle>
-                E-commerce API
-                <ProjectLevel level="Advanced">Advanced</ProjectLevel>
-              </ResourceTitle>
-              <ResourceDescription>
-                Develop a complete e-commerce API with Node.js, Express, and MongoDB. This project will cover advanced topics like authentication, file uploads, and payment processing.
-              </ResourceDescription>
-              <ul>
-                <li>Design and implement a RESTful API</li>
-                <li>Set up user authentication with JWT</li>
-                <li>Create models for products, orders, and users</li>
-                <li>Implement product search and filtering</li>
-                <li>Add payment processing with Stripe</li>
-                <li>Handle file uploads for product images</li>
-              </ul>
-            </ProjectCard>
-          </ResourcesGrid>
-        </Section>
-        
-        <Section>
-          <SectionTitle>Community Resources</SectionTitle>
-          
-          <ResourcesGrid>
-            <ResourceCard>
-              <ResourceIcon>
-                <FaGlobe />
-              </ResourceIcon>
-              <ResourceTitle>Node.js Reddit Community</ResourceTitle>
-              <ResourceDescription>
-                Join the Node.js subreddit to connect with other developers, ask questions, and share your projects.
-              </ResourceDescription>
-              <ResourceLink href="https://www.reddit.com/r/node/" target="_blank" rel="noopener noreferrer">
-                Join Community <FaExternalLinkAlt />
-              </ResourceLink>
-            </ResourceCard>
-            
-            <ResourceCard>
-              <ResourceIcon>
-                <FaGlobe />
-              </ResourceIcon>
-              <ResourceTitle>Stack Overflow</ResourceTitle>
-              <ResourceDescription>
-                Find answers to your Node.js and GitHub questions on Stack Overflow, the largest developer Q&A platform.
-              </ResourceDescription>
-              <ResourceLink href="https://stackoverflow.com/questions/tagged/node.js" target="_blank" rel="noopener noreferrer">
-                Browse Questions <FaExternalLinkAlt />
-              </ResourceLink>
-            </ResourceCard>
-            
-            <ResourceCard>
-              <ResourceIcon>
-                <FaGithub />
-              </ResourceIcon>
-              <ResourceTitle>Open Source Projects</ResourceTitle>
-              <ResourceDescription>
-                Contribute to open source Node.js projects on GitHub to gain real-world experience and collaborate with other developers.
-              </ResourceDescription>
-              <ResourceLink href="https://github.com/topics/nodejs" target="_blank" rel="noopener noreferrer">
-                Explore Projects <FaExternalLinkAlt />
-              </ResourceLink>
-            </ResourceCard>
-          </ResourcesGrid>
-        </Section>
-      </div>
-    </>
-  );
-};
-
-export default Resources;.primary};
-  margin-bottom: ${props => props.theme.spacing.medium};
-`;
-
-const ResourceTitle = styled.h3`
-  margin-bottom: ${props => props.theme.spacing.small};
-`;
-
-const ResourceDescription = styled.p`
-  margin-bottom: ${props => props.theme.spacing.medium};
-  flex-grow: 1;
-`;
-
-const ResourceLink = styled.a`
-  display: inline-flex;
-  align-items: center;
-  gap: ${props => props.theme.spacing.small};
-  color: ${props => props.theme.colors
