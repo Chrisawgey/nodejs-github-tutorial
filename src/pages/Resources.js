@@ -515,14 +515,7 @@ const Resources = () => {
           </ResourcesGrid>
         </Section>
         
-        <NewsletterSection>
-          <NewsletterTitle>Stay Updated with Node.js & GitHub News</NewsletterTitle>
-          <p>Subscribe to our newsletter to receive the latest tutorials, tips, and resources.</p>
-          <NewsletterForm>
-            <NewsletterInput type="email" placeholder="Your email address" />
-            <NewsletterButton type="submit">Subscribe</NewsletterButton>
-          </NewsletterForm>
-        </NewsletterSection>
+        
       </div>
     </>
   );
