@@ -63,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   code {
-    background-color: #f7f7f7;
+    
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
     font-family: ${props => props.theme.fonts.code};

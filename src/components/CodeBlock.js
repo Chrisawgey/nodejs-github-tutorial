@@ -11,7 +11,6 @@ const CodeBlockContainer = styled.div`
 
 const CodeHeader = styled.div`
   background: #1e1e1e;
-  color: #d4d4d4;
   padding: ${props => props.theme.spacing.small} ${props => props.theme.spacing.medium};
   font-family: ${props => props.theme.fonts.code};
   font-size: 0.9rem;
@@ -21,8 +20,8 @@ const CodeHeader = styled.div`
 
 const StyledSyntaxHighlighter = styled(SyntaxHighlighter)`
   margin: 0 !important;
-  border-top-left-radius: ${props => props.fileName ? '0' : props.theme.borderRadius};
-  border-top-right-radius: ${props => props.fileName ? '0' : props.theme.borderRadius};
+  border-top-left-radius: ${props => (props.hasFileName ? '0' : props.theme.borderRadius)};
+  border-top-right-radius: ${props => (props.hasFileName ? '0' : props.theme.borderRadius)};
   border-bottom-left-radius: ${props => props.theme.borderRadius};
   border-bottom-right-radius: ${props => props.theme.borderRadius};
 `;
@@ -34,7 +33,7 @@ const CodeBlock = ({ language, fileName, children }) => {
       <StyledSyntaxHighlighter 
         language={language} 
         style={vscDarkPlus}
-        fileName={fileName}
+        hasFileName={!!fileName} // Pass a valid prop for styled-components
         showLineNumbers
       >
         {children}
