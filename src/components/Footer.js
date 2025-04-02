@@ -139,7 +139,7 @@ const Footer = () => {
         </FooterContent>
         
         <Copyright>
-          <span>Made with</span> <FaHeart style={{ color: '#e74c3c' }} /> <span>by Developers for Developers</span>
+          <span>Made with</span> <FaHeart style={{ color: '#e74c3c' }} /> <span>by a Developer for Developers</span>
         </Copyright>
       </div>
     </FooterContainer>
